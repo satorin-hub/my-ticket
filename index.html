@@ -749,7 +749,7 @@
             startTime.textContent = ticketInfo.startTime;
             holderName.textContent = ticketInfo.holderName;
             favoriteName.textContent = ticketInfo.favoriteName;
-            referenceNumber.textContent = `${ticketInfo.prefix}ー${String(OtkRef.i.number)}`;
+            referenceNumber.textContent = `${ticketInfo.prefix}‐${String(OtkRef.i.number)}`;
             ticketWrapper.style.backgroundColor = ticketInfo.color.sub;
             referenceNumberContainer.style.backgroundColor = ticketInfo.color.main;
             entryButton.style.backgroundColor = ticketInfo.color.main;
@@ -805,7 +805,7 @@
                 const newNumber = OtkRef.i.number + incremental;
                 OtkRef.i.number = newNumber > 0 ? newNumber : 1;
 
-                referenceNumber.textContent = `${ticketInfo.prefix}ー${String(OtkRef.i.number)}`;
+                referenceNumber.textContent = `${ticketInfo.prefix}‐${String(OtkRef.i.number)}`;
             });
 
             // 入場ボタン動作
