@@ -566,11 +566,11 @@
         </div>
     </div>
     <script>
-        const ticketInfoBase = {"eventName":"HEROINES FES -DEBUT DAY-","eventImage":"VKH7oL4gezijY2J1WnUj_314388_1774603628251.webp","_date":{"year":2026,"month":4,"day":19},"openVenue":"12:00","startTime":"12:40","venueName":"立川ステージガーデン｜4月19日公演","ticketType":"Sチケット","prefix":"S",eventInfo: ""};
+        const ticketInfoBase = {"eventName":"夜光性アミューズ5周年記念東名阪TOUR 『NIGHT PARADE 2026』  ","eventImage":"VKH7oL4gezijY2J1WnUj_555258_1766106884747.jpeg","_date":{"year":2026,"month":4,"day":8},"openVenue":"17:00","startTime":"18:00","venueName":"『NIGHT PARADE 2026 in Osaka』｜Zepp Namba(OSAKA)","ticketType":"Sチケット","prefix":"S",eventInfo: ""};
         const ticketInfo = {
             ...ticketInfoBase,
-            favoriteName: "MEGAFON",
-            holderName: "みぽたぽた",
+            favoriteName: "みぽたぽた",
+            holderName: "川島省吾",
         }
     </script>
     <script>
@@ -749,7 +749,7 @@
             startTime.textContent = ticketInfo.startTime;
             holderName.textContent = ticketInfo.holderName;
             favoriteName.textContent = ticketInfo.favoriteName;
-            referenceNumber.textContent = "S-123";
+            referenceNumber.textContent = `${ticketInfo.prefix}ー${String(OtkRef.i.number)}`;
             ticketWrapper.style.backgroundColor = ticketInfo.color.sub;
             referenceNumberContainer.style.backgroundColor = ticketInfo.color.main;
             entryButton.style.backgroundColor = ticketInfo.color.main;
@@ -805,7 +805,7 @@
                 const newNumber = OtkRef.i.number + incremental;
                 OtkRef.i.number = newNumber > 0 ? newNumber : 1;
 
-                referenceNumber.textContent = "S-123";
+                referenceNumber.textContent = `${ticketInfo.prefix}ー${String(OtkRef.i.number)}`;
             });
 
             // 入場ボタン動作
